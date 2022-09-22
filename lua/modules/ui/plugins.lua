@@ -23,4 +23,8 @@ plugin({
   requires = 'kyazdani42/nvim-web-devicons',
 })
 
-plugin({ 'akinsho/nvim-bufferline.lua', config = conf.nvim_bufferline, requires = 'kyazdani42/nvim-web-devicons' })
+plugin({ 'akinsho/nvim-bufferline.lua', 
+  branch = 'main',
+  config = conf.nvim_bufferline, 
+  requires = 'kyazdani42/nvim-web-devicons' 
+})

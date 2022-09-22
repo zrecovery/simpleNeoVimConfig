@@ -1,55 +1,11 @@
 <h1 align="center">
-  <img
-    src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png"
-    height="30"
-    width="0px"
-  />
-  Cosynvim
-  <img
-    src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png"
-    height="30"
-    width="0px"
-  />
+  My personal configuration for NeoVim.
+  Fork from glepnir.
 </h1>
 
-<p align="center">
-  <a href="https://github.com/glepnir/cosynvim/stargazers">
-    <img
-      alt="Stargazers"
-      src="https://img.shields.io/github/stars/glepnir/cosynvim?style=for-the-badge&logo=starship&color=c678dd&logoColor=d9e0ee&labelColor=282a36"
-    />
-  </a>
-  <a href="https://github.com/glepnir/cosynvim/issues">
-    <img
-      alt="Issues"
-      src="https://img.shields.io/github/issues/glepnir/cosynvim?style=for-the-badge&logo=gitbook&color=f0c062&logoColor=d9e0ee&labelColor=282a36"
-    />
-  </a>
-  <a href="https://github.com/glepnir/cosynvim/contributors">
-    <img
-      alt="Contributors"
-      src="https://img.shields.io/github/contributors/glepnir/cosynvim?style=for-the-badge&logo=opensourceinitiative&color=abcf84&logoColor=d9e0ee&labelColor=282a36"
-    />
-  </a>
-</p>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/41671631/176990490-aeb6111b-41ea-4767-bc03-c0aee4774a4e.png"
-  height = "40%"
-  widht = "40%"
-  />
-</p>
-
-## What is Cosynvim
-
-Many people are interested in my [personal configuration](https://github.com/glepnir/nvim). So I created Cosynvim.
-
-What does Cosynvim do? Cosynvim wants vimers to have their own config with high performance
-
-fast speed and modernity.
 
 ## Structure
-
 ```
 ├── init.lua  
 ├── lua
@@ -78,8 +34,6 @@ fast speed and modernity.
 ├── snippets                       snippets 
 │   ├── lua.json
 │   └── package.json
-└── static                         dashboard logo
-    └── neovim.cat
 
 ```
 

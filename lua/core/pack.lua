@@ -131,7 +131,6 @@ function plugins.load_compile()
     end,
     group = PackerHooks,
   })
-
 end
 
 return plugins

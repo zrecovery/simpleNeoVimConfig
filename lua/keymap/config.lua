@@ -9,7 +9,6 @@ local silent, noremap = keymap.silent, keymap.noremap
 local opts = keymap.new_opts
 local cmd = keymap.cmd
 
-
 -- Use space as leader key
 vim.g.mapleader = ' '
 
@@ -46,5 +45,3 @@ imap({
 
 -- commandline remap
 cmap({ '<C-b>', '<Left>', opts(noremap) })
-
-

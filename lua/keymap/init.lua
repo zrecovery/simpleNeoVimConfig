@@ -12,8 +12,7 @@ local cmd = key.cmd
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0
-    and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
 --- move to prev/next item in completion menuone
@@ -31,7 +30,6 @@ _G.smart_tab = function()
   elseif luasnip_status then
     return '<Plug>luasnip-expand-or-jump'
   elseif has_words_before() then
-    
     return '<Tab>'
   else
     return '<Tab>'
@@ -56,8 +54,6 @@ imap({
   { '<TAB>', _G.smart_tab, opts(expr, silent, remap) },
   { '<S-TAB>', _G.smart_shift_tab, opts(expr, silent, remap) },
 })
-
-
 
 -- usage of plugins
 nmap({

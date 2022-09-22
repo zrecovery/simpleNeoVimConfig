@@ -31,6 +31,12 @@ function config.dashboard()
       action = 'Telescope find_files find_command=rg,--hidden,--files',
       shortcut = 'SPC f f',
     },
+    {
+      icon = '  ',
+      desc = 'NeoVim Config                           ',
+      action = 'Telescope dotfiles path=' .. vim.env.HOME .. '/.dotfiles',
+      shortcut = 'SPC f d',
+    },
   }
 end
 

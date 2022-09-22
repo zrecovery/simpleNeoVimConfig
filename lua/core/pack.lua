@@ -88,11 +88,6 @@ function plugins.register_plugin(repo)
   table.insert(Packer.repos, repo)
 end
 
--- function plugins.compile_notify()
---   plugins.compile()
---   vim.notify('Compile Done!','info',{ title = 'Packer' })
--- end
-
 function plugins.auto_compile()
   local file = vim.fn.expand('%:p')
   if not file:match(vim_path) then
@@ -132,16 +127,11 @@ function plugins.load_compile()
     pattern = 'PackerCompileDone',
     callback = function()
       vim.notify('Compile Done!', vim.log.levels.INFO, { title = 'Packer' })
+      dofile(vim.env.MYVIMRC)
     end,
     group = PackerHooks,
   })
 
-  -- vim.cmd [[command! PackerCompile lua require('core.pack').compile()]]
-  -- vim.cmd [[command! PackerInstall lua require('core.pack').install()]]
-  -- vim.cmd [[command! PackerUpdate lua require('core.pack').update()]]
-  -- vim.cmd [[command! PackerSync lua require('core.pack').sync()]]
-  -- vim.cmd [[command! PackerClean lua require('core.pack').clean()]]
-  -- vim.cmd [[command! PackerStatus  lua require('packer').status()]]
 end
 
 return plugins

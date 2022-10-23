@@ -5,7 +5,7 @@
 
 require('keymap.config')
 local key = require('core.keymap')
-local nmap, imap, xmap, tmap = key.nmap, key.imap, key.xmap, key.tmap
+local nmap, imap = key.nmap, key.imap
 local silent, noremap, expr, remap = key.silent, key.noremap, key.expr, key.remap
 local opts = key.new_opts
 local cmd = key.cmd
@@ -57,16 +57,26 @@ imap({
 
 -- usage of plugins
 nmap({
-  -- packer
-  { '<Leader>pu', cmd('PackerUpdate'), opts(noremap, silent) },
-  { '<Leader>pi', cmd('PackerInstall'), opts(noremap, silent) },
-  { '<Leader>pc', cmd('PackerCompile'), opts(noremap, silent) },
   -- dashboard
   { '<Leader>n', cmd('DashboardNewFile'), opts(noremap, silent) },
   { '<Leader>ss', cmd('SessionSave'), opts(noremap, silent) },
   { '<Leader>sl', cmd('SessionLoad'), opts(noremap, silent) },
   -- nvimtree
   { '<Leader>e', cmd('NvimTreeToggle'), opts(noremap, silent) },
+  -- buffer jump
+  { ']b', cmd('bn'), opts(noremap) },
+  { '[b', cmd('bp'), opts(noremap) },
+  -- Lspsaga
+  { '[e', cmd('Lspsaga diagnostic_jump_next'), opts(noremap, silent) },
+  { ']e', cmd('Lspsaga diagnostic_jump_prev'), opts(noremap, silent) },
+  { 'K', cmd('Lspsaga hover_doc'), opts(silent) },
+  { 'ga', cmd('Lspsaga code_action'), opts(noremap, silent) },
+  { 'gd', cmd('Lspsaga peek_definition'), opts(noremap, silent) },
+  { 'gs', cmd('Lspsaga signature_help'), opts(noremap, silent) },
+  { 'gr', cmd('Lspsaga rename'), opts(noremap, silent) },
+  { 'gh', cmd('Lspsaga lsp_finder'), opts(noremap, silent) },
+  { '<Leader>o', cmd('LSoutlineToggle'), opts(noremap, silent) },
+  { '<Leader>g', cmd('Lspsaga open_floaterm lazygit'), opts(noremap, silent) },
   -- Telescope
   { '<Leader>b', cmd('Telescope buffers'), opts(noremap, silent) },
   { '<Leader>fa', cmd('Telescope live_grep'), opts(noremap, silent) },

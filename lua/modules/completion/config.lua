@@ -71,4 +71,12 @@ function config.auto_pairs()
   cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 end
 
+function config.lspsaga()
+  local saga = require('lspsaga')
+  saga.init_lsp_saga({
+    symbol_in_winbar = {
+      enable = true,
+    },
+  })
+end
 return config

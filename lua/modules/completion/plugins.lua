@@ -9,7 +9,7 @@ plugin({
   'neovim/nvim-lspconfig',
   -- used filetype to lazyload lsp
   -- config your language filetype in here
-  ft = { 'lua', 'c', 'py', 'ts', 'js' },
+  ft = { 'lua', 'go', 'c', 'py', 'ts', 'js' ,'svelte' },
   config = conf.nvim_lsp,
 })
 
@@ -28,3 +28,5 @@ plugin({
 plugin({ 'L3MON4D3/LuaSnip', event = 'InsertCharPre', config = conf.lua_snip })
 
 plugin({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pairs })
+
+plugin({ 'glepnir/lspsaga.nvim', branch = 'main', after = 'nvim-lspconfig', config = conf.lspsaga })
